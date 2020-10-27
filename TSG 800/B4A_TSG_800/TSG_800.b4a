@@ -1,0 +1,115 @@
+﻿Build1=Default,b4a.example
+File1=barcode.png
+File10=nfc.bal
+File11=nfc.png
+File12=nfc1.png
+File13=print.bal
+File14=print.png
+File15=qr_code.png
+File2=barCodes.bal
+File3=BarCodeV2.bal
+File4=buttons.bal
+File5=FirstDesign.bal
+File6=gertec.png
+File7=invoice.png
+File8=Layout.bal
+File9=logo.png
+FileGroup1=New Group
+FileGroup10=Default Group
+FileGroup11=New Group
+FileGroup12=New Group
+FileGroup13=Default Group
+FileGroup14=New Group
+FileGroup15=New Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=New Group
+FileGroup7=New Group
+FileGroup8=Default Group
+FileGroup9=New Group
+Group=Default Group
+Library1=core
+Library2=xui
+Library3=nfc
+Library4=reflection
+Library5=zxingbarcodescanner
+Library6=printtsg800
+Library7=viewsex
+Library8=javaobject
+Library9=phone
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="16" ~\n~		android:targetSdkVersion="28"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~~\n~AddManifestText(<uses-feature android:name="android.hardware.telephony" android:required="false" />)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera" android:required="false" />)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera.flash" android:required="false" />)~\n~'AddPermission("android.permission.ACCESS_COARSE_LOCATION")~\n~AddPermission("android.permission.INTERNET")~\n~AddPermission("android.permission.ACCESS_FINE_LOCATION")~\n~AddPermission("android.permission.WAKE_LOCK")~\n~AddPermission("android.permission.DEVICE_POWER")~\n~'AddPermission("android.permission.ACCESS_COARSE_UPDATES")~\n~AddPermission("android.permission.READ_PHONE_STATE")~\n~AddPermission("android.permission.VIBRATE")~\n~'AddPermission("android.permission.CAMERA")~\n~'AddPermission("android.permission.FLASHLIGHT")~\n~'AddPermission("android.hardware.camera")~\n~~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=Bar_Code
+Module2=BarCodeV2
+Module3=NFC
+Module4=Print
+Module5=Starter
+NumberOfFiles=15
+NumberOfLibraries=9
+NumberOfModules=5
+Version=10
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: GertecOne B4A
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Private xui As XUI
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private ScrollView1 As ScrollView
+	Private ButtonBarCode As Button
+	Private ButttonPrint As Button
+	Private ButtonBarCodeV2 As Button
+	Private ButtonNfc As Button
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("layout")
+	ScrollView1.Panel.LoadLayout("buttons")
+	ScrollView1.Panel.Width = 360dip
+	ScrollView1.Panel.Height = 450dip
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub Button1_Click
+	xui.MsgboxAsync("Hello world!", "B4X")
+End Sub
+
+Sub ButtonBarCode_Click
+	StartActivity(Bar_Code)
+End Sub
+
+Sub ButttonPrint_Click
+	StartActivity(Print)
+End Sub
+
+Sub ButtonBarCodeV2_Click
+	StartActivity(BarCodeV2)
+End Sub
+
+Sub ButtonNfc_Click
+	StartActivity(NFC)
+End Sub

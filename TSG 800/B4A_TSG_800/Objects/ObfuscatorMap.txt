@@ -1,0 +1,26 @@
+This file maps the renamed variables to the original ones.
+v5=xui
+v6=barcodev2
+v7=nfc
+v0=print
+vv1=starter
+vv2=flashon
+vv3=main
+vv4=tsg
+vv5=r
+vv6=text
+vv7=font
+vv0=fontsize
+vvv1=bold
+vvv2=italic
+vvv3=underline
+vvv4=align
+vvv5=typebarcode
+vvv6=widthbarcode
+vvv7=heightbarcode
+vvv0=imagebmp
+vvvv1=nf
+vvvv2=previntent
+vvvv3=tagtech
+vvvv4=readndef
+vvvv5=writendef
