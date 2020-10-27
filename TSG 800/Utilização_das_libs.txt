@@ -1,0 +1,13 @@
+Configuração de Utilização - Gertec Framework v1.0.0
+
+Instruções:
+1) Abra o projeto TSG_800 no B4A.
+
+2) No menu de Libraries Manager, click com o botão direito e escolha
+a opção 'Open Internal Libraries Folder'.
+
+3) Após abrir o diretórios de bibliotecas do B4A, copie todos os arquivos
+que estão dentro da pasta 'Libs' e cole no diretório de libs do B4A.
+
+4) Depois de ter adicionado todos arquivos da pasta 'Libs', o projeto já
+estará com as bibliotecas dependentes selecionadas.
